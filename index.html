@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Factor6 Inc. | Analyzer engineering for owners and EPCs</title>
+<meta name="description" content="Factor6 Inc. is setting the next industry standard in process analytics: analyzer engineering for owner-operators and EPC firms, from FEED through validated startup and on running plants.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Factor6 Inc.">
+<meta property="og:description" content="Setting the next industry standard in process analytics.">
+<meta property="og:url" content="https://factor6.ca/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap">
+<style>
+/* One long page, dark masthead then paper body. Brand: midnight, coin, ivory, paper. */
+:root{
+  --midnight:#10243A; --midnight-2:#0B1B2C; --coin:#C9A84C; --coin-ink:#8A6D1F;
+  --ivory:#FFFCF5; --paper:#F7F5F0; --line:#E4DDD0; --muted:#5C6E72; --ink:#10243A;
+  --font:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --wrap:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-weight:500;line-height:1.15;letter-spacing:-.01em;text-wrap:balance;margin:0}
+.label{font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--coin-ink)}
+p{margin:0}
+
+/* Masthead */
+.top{background:var(--midnight);color:var(--ivory);position:relative;overflow:hidden}
+.top::after{content:"";position:absolute;right:-120px;top:-60px;width:620px;height:720px;opacity:.09;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 115'%3E%3Cpolygon points='50,2 98,30 98,85 50,113 2,85 2,30' fill='none' stroke='%23C9A84C' stroke-width='2.5'/%3E%3Cpolygon points='50,12 90,35 90,80 50,103 10,80 10,35' fill='none' stroke='%23C9A84C' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat center/contain}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px}
+nav img{height:26px;width:auto}
+nav .links{display:flex;gap:22px;font-size:.92rem}
+nav .links a{text-decoration:none;opacity:.85}
+nav .links a:hover{opacity:1;color:var(--coin)}
+.hero{padding-block:72px 96px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);max-width:17ch}
+.hero p{margin-top:22px;font-size:1.15rem;max-width:52ch;color:#D9D4C6}
+.hero .hex{width:190px}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:34px;padding:14px 22px;background:var(--coin);color:var(--midnight);font-weight:600;text-decoration:none;border-radius:4px}
+.cta:hover{background:#D6B866}
+.cta:focus-visible,nav a:focus-visible{outline:2px solid var(--ivory);outline-offset:3px}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-block:40px 64px}.hero .hex{display:none}nav .links{display:none}}
+
+/* Sections */
+section{padding-block:80px}
+section + section{border-top:1px solid var(--line)}
+.head{display:grid;gap:12px;margin-bottom:36px;max-width:62ch}
+.head h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.lede{font-size:1.1rem;max-width:64ch}
+.lede + .lede{margin-top:16px}
+.signs{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.signs li{border:1px solid var(--line);background:var(--ivory);padding:8px 14px;border-radius:999px;font-size:.92rem}
+
+/* Standard table */
+.std{overflow-x:auto;margin-top:8px}
+.std table{width:100%;border-collapse:collapse;min-width:560px}
+.std th{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;text-align:left;color:var(--muted);padding:0 16px 12px 0;border-bottom:2px solid var(--midnight)}
+.std td{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.std td:first-child{color:var(--muted);width:45%}
+.std td:last-child{font-weight:500}
+.std td:last-child::before{content:"";display:inline-block;width:8px;height:8px;background:var(--coin);transform:rotate(45deg);margin-right:10px;vertical-align:2px}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
+.svc{background:var(--ivory);padding:28px 28px 30px;display:grid;gap:10px;align-content:start}
+.svc h3{font-size:1.25rem}
+.svc .when{font-size:.8rem;letter-spacing:.06em;color:var(--coin-ink);font-weight:500}
+.svc p{color:#2E4152}
+@media (max-width:760px){.services{grid-template-columns:1fr}}
+
+/* How + about */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px}
+@media (max-width:760px){.two{grid-template-columns:1fr;gap:40px}}
+.two h3{font-size:1.35rem;margin-bottom:14px}
+.two p + p{margin-top:14px}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
+.creds li{font-size:.82rem;font-weight:500;letter-spacing:.04em;padding:5px 10px;border:1px solid var(--midnight);border-radius:3px}
+
+/* Contact */
+.contact{background:var(--midnight);color:var(--ivory)}
+.contact .label{color:var(--coin)}
+.contact h2{font-size:clamp(1.6rem,3vw,2.2rem);max-width:22ch}
+.contact .row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px}
+.contact .mail{font-size:clamp(1.3rem,2.6vw,1.8rem);font-weight:500;color:var(--coin);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.4)}
+.contact .mail:hover{border-color:var(--coin)}
+.contact .where{margin-top:12px;color:#C9C4B6}
+footer{background:var(--midnight-2);color:#8E9AA6;font-size:.82rem;padding-block:22px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a href="#" aria-label="Factor6 home"><img src="img/wordmark-ivory.png" alt="FACTOR6"></a>
+      <div class="links">
+        <a href="#problem">The problem</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <div>
+        <p class="label" style="color:var(--coin)">Factor6 Inc.</p>
+        <h1 style="margin-top:14px">Setting the next industry standard in process analytics</h1>
+        <p>Analyzer engineering for owner-operators and EPC firms, from FEED through validated startup and on running plants.</p>
+        <a class="cta" href="mailto:mpuzic@factor6.ca">Email Marko</a>
+      </div>
+      <img class="hex" src="img/hex.png" alt="">
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="problem">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">The problem</p>
+        <h2>Analyzers usually warn you before they give a wrong answer</h2>
+      </div>
+      <p class="lede">The signs are there. On most plants and projects, nobody owns them. On a project, the analyzer scope is split across every discipline package and accepted at mechanical completion, before anyone has checked the reading against the lab on real process fluid. On a running plant, the signs land with whoever has time.</p>
+      <p class="lede">The result is a number the plant trusts more than it should. Factor6 takes ownership of the measurement, from the process tap to the operator's screen.</p>
+      <ul class="signs" aria-label="Common warning signs">
+        <li>A blip that clears itself</li>
+        <li>A slow drift away from the lab</li>
+        <li>A fault that keeps coming back</li>
+        <li>A steady bias nobody has explained</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="standard">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">The standard</p>
+        <h2>What should be standard practice for process analyzers</h2>
+      </div>
+      <div class="std">
+        <table>
+          <thead><tr><th scope="col">Common practice today</th><th scope="col">The standard Factor6 works to</th></tr></thead>
+          <tbody>
+            <tr><td>Warning signs handled by whoever has time</td><td>Signs tracked as a program, with an owner and a planned response for each</td></tr>
+            <tr><td>Analyzers accepted at mechanical completion</td><td>Accepted on validated performance against a reference method after startup</td></tr>
+            <tr><td>Sample conditioning specified as "vendor standard"</td><td>Sample systems engineered and reviewed: lag time, phase behaviour, low points, materials</td></tr>
+            <tr><td>Analyzer scope split across every discipline package</td><td>One accountable owner from process tap to DCS</td></tr>
+            <tr><td>Assessments filed and forgotten</td><td>Findings ranked and turned into work the site team can execute</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Services</p>
+        <h2>Where Factor6 starts</h2>
+      </div>
+      <div class="services">
+        <article class="svc">
+          <p class="when">Operating plants</p>
+          <h3>Analyzer Readiness Audit</h3>
+          <p>A fixed-scope review of your analyzer fleet: availability by unit and technique, the causes behind the downtime, sample system condition, and the warning signs nobody has had time to chase. You get a ranked plan for what to fix first.</p>
+        </article>
+        <article class="svc">
+          <p class="when">Projects, before IFC</p>
+          <h3>Sample System Design Review</h3>
+          <p>A system-by-system check of a vendor package or design for lag time, phase behaviour, materials and maintainability, while changes are still cheap.</p>
+        </article>
+        <article class="svc">
+          <p class="when">Startup</p>
+          <h3>Commissioning and validation</h3>
+          <p>Procedures and acceptance criteria that prove each analyzer reads true on real process fluid, and a handover package your maintenance team can run with.</p>
+        </article>
+        <article class="svc">
+          <p class="when">Design through startup</p>
+          <h3>Owner's analyzer representative</h3>
+          <p>Senior analyzer oversight embedded in your project: design review, vendor and FAT oversight, installation checks and commissioning direction.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap two">
+      <div>
+        <p class="label">How we work</p>
+        <h3 style="margin-top:12px">Directly for owners, and alongside EPC partners</h3>
+        <p>Factor6 works for owner-operators directly and with EPC firms that need analyzer depth on a project. We are vendor neutral and take no commissions from analyzer suppliers, so a recommendation is only ever about the measurement.</p>
+        <p>Every engagement leaves your team with something it keeps: a standard, a checklist, a cleaner design.</p>
+      </div>
+      <div>
+        <p class="label">About</p>
+        <h3 style="margin-top:12px">Marko Puzic, P.Eng.</h3>
+        <p>Marko spent his career on the operator side of process analytics in Canada's petrochemical industry. He introduced new measurement technologies, helped set analyzer standards across a large operating company, and held the analyzer scope on a greenfield capital project from design through startup.</p>
+        <ul class="creds" aria-label="Credentials">
+          <li>P.Eng. Ontario</li><li>P.Eng. Alberta</li><li>PMP</li><li>Six Sigma Black Belt</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="label">Contact</p>
+    <div class="row" style="margin-top:14px">
+      <h2>Talk to us about an analyzer problem or an upcoming project</h2>
+      <div>
+        <a class="mail" href="mailto:mpuzic@factor6.ca">mpuzic@factor6.ca</a>
+        <p class="where">Calgary and Sarnia. Work across Canada and the United States.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Factor6 Inc.</span>
+    <span>Setting the next industry standard in process analytics</span>
+  </div>
+</footer>
+
+</body>
+</html>
