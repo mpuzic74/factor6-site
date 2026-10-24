@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://factor6.ca/sitemap.xml
